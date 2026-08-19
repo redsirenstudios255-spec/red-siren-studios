@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Red Siren Studios — creative apps built for creators.">
+<title>Red Siren Studios</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div>
+
+<header class="nav">
+  <a class="brand" href="#home">
+    <img src="logo.png" alt="Red Siren Studios">
+    <span><b>RED SIREN</b><small>STUDIOS</small></span>
+  </a>
+  <button class="menu" aria-label="Open menu">☰</button>
+  <nav>
+    <a href="#apps">Apps</a>
+    <a href="#studio">Studio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-copy">
+    <div class="badge"><i></i> THE CREATIVE SOFTWARE STUDIO</div>
+    <h1>Turn your <em>ideas</em><br>into something real.</h1>
+    <p>Red Siren Studios builds focused creative apps for recording, capturing, producing and creating.</p>
+    <div class="actions">
+      <a class="btn red" href="#apps">Explore Apps <span>↗</span></a>
+      <a class="text-btn" href="#studio">Discover the studio <span>→</span></a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="ring ring1"></div><div class="ring ring2"></div>
+    <img src="logo.png" alt="" class="hero-logo">
+    <div class="orbit o1">VOICE</div>
+    <div class="orbit o2">CAMERA</div>
+    <div class="orbit o3">STUDIO</div>
+  </div>
+  <div class="scroll">SCROLL <span></span></div>
+</section>
+
+<section id="apps" class="section apps">
+  <div class="heading">
+    <span class="kicker">01 / OUR APPS</span>
+    <h2>One studio.<br><span>Many creative tools.</span></h2>
+    <p>Our products are designed to work beautifully on their own — and eventually work together.</p>
+  </div>
+
+  <div class="app-list">
+    <article class="app featured">
+      <div class="app-number">01</div>
+      <div class="app-icon mic">●</div>
+      <div class="app-main">
+        <span class="label">IN DEVELOPMENT</span>
+        <h3>Red Siren Voice</h3>
+        <p>A clean, powerful recording experience for voices, songs, ideas and everyday audio.</p>
+        <a href="#">View product <span>→</span></a>
+      </div>
+      <div class="app-symbol">VOICE</div>
+    </article>
+
+    <article class="app">
+      <div class="app-number">02</div>
+      <div class="app-icon camera">□</div>
+      <div class="app-main">
+        <span class="label muted">COMING NEXT</span>
+        <h3>Red Siren Camera</h3>
+        <p>A creative camera app focused on simple capture and better moments.</p>
+        <a href="#">Coming soon <span>→</span></a>
+      </div>
+      <div class="app-symbol">CAM</div>
+    </article>
+
+    <article class="app">
+      <div class="app-number">03</div>
+      <div class="app-icon film">▶</div>
+      <div class="app-main">
+        <span class="label muted">PLANNED</span>
+        <h3>Red Siren Studio</h3>
+        <p>A future creative workspace for bringing audio and media projects together.</p>
+        <a href="#">In the roadmap <span>→</span></a>
+      </div>
+      <div class="app-symbol">STUDIO</div>
+    </article>
+  </div>
+</section>
+
+<section id="studio" class="statement">
+  <div class="statement-inner">
+    <span class="kicker">02 / THE STUDIO</span>
+    <h2>We don't build apps<br>just to <span>fill a screen.</span></h2>
+    <p>We build tools with a purpose — fast, beautiful and made around the people who use them.</p>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="manifesto-card">
+    <div class="mini-logo"><img src="logo.png" alt=""></div>
+    <span>RED SIREN STUDIOS</span>
+    <strong>CREATE.<br>RECORD.<br>CAPTURE.</strong>
+  </div>
+  <div class="manifesto-copy">
+    <span class="kicker">03 / OUR VISION</span>
+    <h2>A growing family of creative apps.</h2>
+    <p>Red Siren Voice is only the beginning. As the studio grows, new products will join the ecosystem.</p>
+    <div class="line"></div>
+    <div class="future"><b>01</b> Voice <b>02</b> Camera <b>03</b> Studio <b>04</b> More</div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <span class="kicker">04 / STAY CONNECTED</span>
+  <h2>Something new<br>is <span>coming.</span></h2>
+  <p>Follow Red Siren Studios as we build the next generation of creative tools.</p>
+  <a class="btn red" href="mailto:hello@redsirenstudios.com">Contact the Studio <span>↗</span></a>
+</section>
+</main>
+
+<footer>
+  <div class="footer-brand"><img src="logo.png" alt=""> <span>RED SIREN STUDIOS</span></div>
+  <span>© 2026 Red Siren Studios</span>
+  <span>Built for creators.</span>
+</footer>
+
+<script>
+const btn=document.querySelector('.menu'),nav=document.querySelector('nav');
+btn.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+</script>
+</body>
+</html>
