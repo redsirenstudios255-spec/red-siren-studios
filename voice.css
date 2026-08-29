@@ -27,3 +27,26 @@ article p{color:#777;font-size:13px}
 .coming p{color:#777;max-width:520px;margin:auto}
 footer{border-top:1px solid #202020;padding:25px 7%;color:#555;font-size:10px}
 @media(max-width:700px){header{padding:0 5%}.back{font-size:10px}.hero{padding:100px 6%}.cards{grid-template-columns:1fr}.features{padding:80px 6%}}
+.download {
+    padding: 90px 6vw;
+}
+
+.download .heading {
+    max-width: 760px;
+}
+
+.download .heading p {
+    max-width: 680px;
+    margin-bottom: 32px;
+}
+
+.download .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download .btn.disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
