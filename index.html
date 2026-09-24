@@ -10,154 +10,77 @@
         content="Red Siren Studios builds focused creative apps for recording, capturing, producing and creating.">
 
   <link rel="stylesheet" href="style.css">
-
-  <style>
-
-    /* =========================================
-       RS TUNE PRO ICON
-       ========================================= */
-
-    .app-icon {
-      width: 48px;
-      height: 48px;
-
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 12px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      overflow: hidden;
-      flex-shrink: 0;
-
-      background: rgba(255,255,255,0.025);
-    }
-
-    .app-icon img {
-      width: 82%;
-      height: 82%;
-
-      object-fit: contain;
-      display: block;
-    }
-
-    @media (max-width: 700px) {
-
-      .app-icon {
-        width: 48px;
-        height: 48px;
-        border-radius: 12px;
-      }
-
-    }
-
-  </style>
-
 </head>
-
 
 <body>
 
+  <div class="noise"></div>
 
-  <!-- =========================================
-       HEADER
-       ========================================= -->
-
-  <header class="site-header">
+  <nav class="nav">
 
     <a href="index.html" class="brand">
 
       <span class="brand-mark">
-
-        <img
-          src="logo.png"
-          alt="Red Siren Studios"
-        >
-
+        <img src="logo.png" alt="Red Siren Studios">
       </span>
 
-
       <span class="brand-text">
-
-        <strong>
-          RED SIREN
-        </strong>
-
-        <small>
-          STUDIOS
-        </small>
-
+        <strong>RED SIREN</strong>
+        <small>STUDIOS</small>
       </span>
 
     </a>
 
+    <div class="nav-links">
 
-    <button
-      class="menu-button"
-      aria-label="Open menu"
-    >
+      <a href="#apps">Apps</a>
+      <a href="#studio">Studio</a>
+      <a href="#vision">Vision</a>
+
+    </div>
+
+    <button class="menu-button">
       ☰
     </button>
 
-  </header>
+  </nav>
 
-
-
-  <!-- =========================================
-       MAIN
-       ========================================= -->
 
   <main>
 
-
-    <!-- =======================================
-         HERO
-         ======================================= -->
+    <!-- HERO -->
 
     <section class="hero">
 
-
       <div class="hero-content">
-
 
         <p class="eyebrow">
           THE CREATIVE SOFTWARE STUDIO
         </p>
-
 
         <h1>
           Turn your ideas<br>
           into something real.
         </h1>
 
-
         <p class="hero-description">
-
           Red Siren Studios builds focused creative apps for
           recording, capturing, producing and creating.
-
         </p>
 
-
         <div class="hero-buttons">
-
 
           <a href="#apps">
             Explore Apps ↗
           </a>
 
-
           <a href="#studio">
             Discover the studio →
           </a>
 
-
         </div>
 
-
       </div>
-
 
 
       <div class="hero-visual">
@@ -170,343 +93,208 @@
       </div>
 
 
-
       <div class="hero-orbit">
 
-        <span>
-          TUNE
-        </span>
-
-        <span>
-          VOICE
-        </span>
-
-        <span>
-          CAMERA
-        </span>
+        <span>TUNE</span>
+        <span>VOICE</span>
+        <span>CAMERA</span>
 
       </div>
-
 
 
       <div class="scroll-text">
         SCROLL
       </div>
 
-
     </section>
 
 
+    <!-- APPS -->
 
-    <!-- =======================================
-         OUR APPS
-         ======================================= -->
-
-    <section
-      id="apps"
-      class="apps-section"
-    >
-
+    <section id="apps" class="app-list">
 
       <div class="section-number">
         01 / OUR APPS
       </div>
 
-
       <h2>
-
         One studio.<br>
-
-        <span>
-          Many creative tools.
-        </span>
-
+        <span>Many creative tools.</span>
       </h2>
 
-
       <p class="section-description">
-
         Our products are designed to work beautifully
         on their own — and eventually work together.
-
       </p>
 
 
-
-      <!-- =====================================
-           RS TUNE PRO
-           ===================================== -->
+      <!-- RS TUNE PRO -->
 
       <article class="app featured">
-
 
         <div class="app-number">
           01
         </div>
 
-
-        <!-- RS TUNE PRO REAL ICON -->
-
         <div class="app-icon">
-
-          <img
-            src="rs-tune-pro-icon.png"
-            alt="RS Tune Pro"
-          >
-
+          RS
         </div>
 
-
-        <div class="app-content">
-
+        <div class="app-main">
 
           <p class="app-status">
             AVAILABLE NOW
           </p>
 
-
           <h3>
             RS Tune Pro
           </h3>
 
-
           <p>
-
             A powerful audio recording and sound management
             application built by Red Siren Studios.
-
           </p>
 
-
           <a href="rs-tune-pro.html">
-
             View product
-
-            <span>
-              →
-            </span>
-
+            <span>→</span>
           </a>
 
-
         </div>
-
 
       </article>
 
 
-
-      <!-- =====================================
-           RED SIREN VOICE
-           ===================================== -->
+      <!-- RED SIREN VOICE -->
 
       <article class="app">
-
 
         <div class="app-number">
           02
         </div>
 
-
-        <div class="app-icon">
-
-          <span class="voice-dot"></span>
-
+        <div class="app-icon app-symbol">
+          <span></span>
         </div>
 
-
-        <div class="app-content">
-
+        <div class="app-main">
 
           <p class="app-status">
             IN DEVELOPMENT
           </p>
 
-
           <h3>
             Red Siren Voice
           </h3>
 
-
           <p>
-
             A clean, powerful recording experience for
             voices, songs, ideas and everyday audio.
-
           </p>
 
-
           <a href="voice.html">
-
             View product
-
-            <span>
-              →
-            </span>
-
+            <span>→</span>
           </a>
 
-
         </div>
-
 
       </article>
 
 
-
-      <!-- =====================================
-           RED SIREN CAMERA
-           ===================================== -->
+      <!-- RED SIREN CAMERA -->
 
       <article class="app">
-
 
         <div class="app-number">
           03
         </div>
 
-
-        <div class="app-icon">
-
-          <span class="camera-symbol">
-            □
-          </span>
-
+        <div class="app-icon app-symbol">
+          <span class="camera"></span>
         </div>
 
-
-        <div class="app-content">
-
+        <div class="app-main">
 
           <p class="app-status">
             COMING NEXT
           </p>
 
-
           <h3>
             Red Siren Camera
           </h3>
 
-
           <p>
-
             A creative camera app focused on simple
             capture and better moments.
-
           </p>
 
-
           <a href="#">
-
             Coming soon
-
-            <span>
-              →
-            </span>
-
+            <span>→</span>
           </a>
 
-
         </div>
-
 
       </article>
 
 
-
-      <!-- =====================================
-           RED SIREN STUDIO
-           ===================================== -->
+      <!-- RED SIREN STUDIO -->
 
       <article class="app">
-
 
         <div class="app-number">
           04
         </div>
 
-
-        <div class="app-icon">
-
-          <span class="studio-symbol">
-            ▶
-          </span>
-
+        <div class="app-icon app-symbol">
+          <span class="studio"></span>
         </div>
 
-
-        <div class="app-content">
-
+        <div class="app-main">
 
           <p class="app-status">
             PLANNED
           </p>
 
-
           <h3>
             Red Siren Studio
           </h3>
 
-
           <p>
-
             A future creative workspace for bringing
             audio and media projects together.
-
           </p>
 
-
           <a href="#">
-
             In the roadmap
-
-            <span>
-              →
-            </span>
-
+            <span>→</span>
           </a>
-
 
         </div>
 
-
       </article>
-
 
     </section>
 
 
+    <!-- STUDIO -->
 
-    <!-- =======================================
-         THE STUDIO
-         ======================================= -->
-
-    <section
-      id="studio"
-      class="studio-section"
-    >
-
+    <section id="studio" class="studio">
 
       <div class="section-number">
         02 / THE STUDIO
       </div>
 
-
       <h2>
-
         We don't build apps<br>
         just to fill a screen.
-
       </h2>
 
-
       <p>
-
         We build tools with a purpose — fast, beautiful
         and made around the people who use them.
-
       </p>
-
 
       <div class="studio-image">
 
@@ -517,129 +305,82 @@
 
       </div>
 
-
       <div class="studio-tagline">
 
         RED SIREN STUDIOS
         <br>
-
         CREATE.
         <br>
-
         RECORD.
         <br>
-
         CAPTURE.
 
       </div>
 
-
     </section>
 
 
+    <!-- VISION -->
 
-    <!-- =======================================
-         OUR VISION
-         ======================================= -->
-
-    <section class="vision-section">
-
+    <section id="vision" class="vision">
 
       <div class="section-number">
         03 / OUR VISION
       </div>
 
-
       <h2>
-
         A growing family<br>
         of creative apps.
-
       </h2>
 
-
       <p>
-
         RS Tune Pro is the first official product in our
         growing ecosystem of creative tools. More applications
         will continue to join Red Siren Studios.
-
       </p>
-
 
       <div class="vision-list">
 
-        <span>
-          01 Tune Pro
-        </span>
-
-        <span>
-          02 Voice
-        </span>
-
-        <span>
-          03 Camera
-        </span>
-
-        <span>
-          04 Studio
-        </span>
+        <span>01 Tune Pro</span>
+        <span>02 Voice</span>
+        <span>03 Camera</span>
+        <span>04 Studio</span>
 
       </div>
-
 
     </section>
 
 
+    <!-- CONTACT -->
 
-    <!-- =======================================
-         STAY CONNECTED
-         ======================================= -->
-
-    <section class="contact-section">
-
+    <section class="contact">
 
       <div class="section-number">
         04 / STAY CONNECTED
       </div>
 
-
       <h2>
-
         Something new<br>
         is coming.
-
       </h2>
 
-
       <p>
-
         Follow Red Siren Studios as we build the next
         generation of creative tools.
-
       </p>
 
-
       <a href="mailto:hello@redsirenstudios.com">
-
         Contact the Studio ↗
-
       </a>
 
-
     </section>
-
 
   </main>
 
 
-
-  <!-- =========================================
-       FOOTER
-       ========================================= -->
+  <!-- FOOTER -->
 
   <footer>
-
 
     <div class="footer-logo">
 
@@ -650,22 +391,16 @@
 
     </div>
 
-
     <p>
       RED SIREN STUDIOS
     </p>
 
-
     <p>
-
       © 2026 Red Siren Studios
       Built for creators.
-
     </p>
 
-
   </footer>
-
 
 </body>
 </html>
