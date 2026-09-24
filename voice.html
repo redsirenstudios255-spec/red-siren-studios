@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RS Tune Pro v1.0 — Red Siren Studios</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #050505;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 7%;
+    border-bottom: 1px solid #222;
+}
+
+.brand {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.brand span {
+    color: #777;
+}
+
+.back {
+    color: #aaa;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero {
+    padding: 80px 7%;
+    text-align: center;
+}
+
+.pill {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #d40000;
+    border-radius: 30px;
+    color: #ff3333;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 9vw, 100px);
+    line-height: .95;
+    margin-bottom: 25px;
+}
+
+.hero h1 strong {
+    color: #e00000;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #aaa;
+    font-size: 18px;
+}
+
+.buttons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn,
+.ghost {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn {
+    background: #d90000;
+    color: #fff;
+}
+
+.ghost {
+    border: 1px solid #444;
+    color: #fff;
+}
+
+.rs-app {
+    padding: 60px 7%;
+}
+
+.app-intro {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.app-icon {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 35px;
+    display: block;
+    margin: auto;
+}
+
+.app-info small,
+.heading small {
+    color: #e00000;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.app-info h2,
+.heading h2 {
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1;
+    margin: 15px 0 20px;
+}
+
+.app-info p,
+.heading p {
+    color: #aaa;
+    max-width: 700px;
+}
+
+.version {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.version span {
+    border: 1px solid #333;
+    padding: 8px 13px;
+    border-radius: 6px;
+    color: #bbb;
+    font-size: 14px;
+}
+
+.features,
+.download,
+.screenshots,
+.coming {
+    padding: 70px 7%;
+    border-top: 1px solid #1d1d1d;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.card {
+    background: #101010;
+    border: 1px solid #222;
+    border-radius: 14px;
+    padding: 28px;
+}
+
+.card b {
+    color: #e00000;
+}
+
+.card h3 {
+    margin: 12px 0;
+    font-size: 22px;
+}
+
+.card p {
+    color: #999;
+}
+
+.download {
+    text-align: center;
+}
+
+.download .heading p {
+    margin: auto;
+}
+
+.download .btn {
+    margin-top: 30px;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.screenshot-grid img {
+    width: 100%;
+    display: block;
+    border-radius: 14px;
+    border: 1px solid #292929;
+    background: #000;
+}
+
+.coming {
+    text-align: center;
+}
+
+.coming span {
+    color: #e00000;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.coming h2 {
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+.coming p {
+    color: #999;
+}
+
+footer {
+    border-top: 1px solid #222;
+    padding: 30px 7%;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+    .app-intro {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .app-info p {
+        margin: auto;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .screenshot-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    .hero,
+    .rs-app,
+    .features,
+    .download,
+    .screenshots,
+    .coming {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a class="brand" href="index.html">
+        RED SIREN <span>STUDIOS</span>
+    </a>
+
+    <a class="back" href="index.html">
+        ← Back to Studio
+    </a>
+</header>
+
+<main>
+
+<section class="hero">
+    <div class="pill">● RS TUNE PRO v1.0</div>
+
+    <h1>
+        RS Tune<br>
+        <strong>Pro.</strong>
+    </h1>
+
+    <p>
+        A focused recording experience for capturing,
+        organizing and playing back your recordings.
+    </p>
+
+    <div class="buttons">
+        <a class="btn" href="#download">Download App ↓</a>
+        <a class="ghost" href="#features">Explore Features</a>
+    </div>
+</section>
+
+
+<section class="rs-app">
+
+    <div class="app-intro">
+
+        <img
+            class="app-icon"
+            src="assets/rs-tune-pro-icon.png"
+            alt="RS Tune Pro icon"
+        >
+
+        <div class="app-info">
+
+            <small>RED SIREN STUDIOS</small>
+
+            <h2>RS Tune Pro v1.0</h2>
+
+            <p>
+                RS Tune Pro is a recording application designed
+                to make recording, saving and managing audio
+                simple and organized.
+            </p>
+
+            <div class="version">
+                <span>Version 1.0</span>
+                <span>Android</span>
+                <span>M4A</span>
+                <span>First Release</span>
+                <span>Device Storage</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="features" class="features">
+
+    <div class="heading">
+        <small>RS TUNE PRO</small>
+
+        <h2>
+            Built around<br>
+            <span>your recordings.</span>
+        </h2>
+    </div>
+
+    <div class="cards">
+
+        <article class="card">
+            <b>01</b>
+            <h3>Record</h3>
+            <p>
+                Record audio with a simple recording workflow
+                designed for quick access.
+            </p>
+        </article>
+
+        <article class="card">
+            <b>02</b>
+            <h3>Live Waveform</h3>
+            <p>
+                See the recording activity through the
+                live waveform while recording.
+            </p>
+        </article>
+
+        <article class="card">
+            <b>03</b>
+            <h3>Recordings</h3>
+            <p>
+                Keep your saved recordings organized in the
+                recordings section.
+            </p>
+        </article>
+
+        <article class="card">
+            <b>04</b>
+            <h3>Playback</h3>
+            <p>
+                Open a recording and play it back whenever
+                you need to listen.
+            </p>
+        </article>
+
+        <article class="card">
+            <b>05</b>
+            <h3>Auto Save</h3>
+            <p>
+                Finished recordings are saved to the
+                RS Tune Pro recording location.
+            </p>
+        </article>
+
+        <article class="card">
+            <b>06</b>
+            <h3>Manage Recordings</h3>
+            <p>
+                Rename, share or delete recordings directly
+                from the recordings list.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="screenshots">
+
+    <div class="heading">
+        <small>APP PREVIEW</small>
+
+        <h2>
+            Inside<br>
+            <span>RS Tune Pro.</span>
+        </h2>
+
+        <p>
+            A look at the actual RS Tune Pro v1.0 application.
+        </p>
+    </div>
+
+    <div class="screenshot-grid">
+
+        <img src="assets/screenshots/splash.png"
+             alt="RS Tune Pro splash screen">
+
+        <img src="assets/screenshots/home.png"
+             alt="RS Tune Pro home screen">
+
+        <img src="assets/screenshots/recording.png"
+             alt="RS Tune Pro recording screen">
+
+        <img src="assets/screenshots/recordings.png"
+             alt="RS Tune Pro recordings screen">
+
+        <img src="assets/screenshots/playback.png"
+             alt="RS Tune Pro playback screen">
+
+        <img src="assets/screenshots/settings.png"
+             alt="RS Tune Pro settings screen">
+
+        <img src="assets/screenshots/about.png"
+             alt="RS Tune Pro about screen">
+
+        <img src="assets/screenshots/help.png"
+             alt="RS Tune Pro help screen">
+
+    </div>
+
+</section>
+
+
+<section id="download" class="download">
+
+    <div class="heading">
+
+        <small>RS TUNE PRO v1.0</small>
+
+        <h2>Get the app.</h2>
+
+        <p>
+            Download RS Tune Pro v1.0 for Android from
+            the official Red Siren Studios release page.
+        </p>
+
+    </div>
+
+    <a
+        class="btn"
+        href="https://github.com/redsirenstudios255-spec/red-siren-studios/releases/latest"
+        target="_blank"
+        rel="noopener"
+    >
+        Download RS Tune Pro v1.0
+    </a>
+
+</section>
+
+
+<section class="coming">
+
+    <span>RED SIREN STUDIOS</span>
+
+    <h2>RS Tune Pro v1.0</h2>
+
+    <p>
+        Record. Listen. Save.
+    </p>
+
+</section>
+
+</main>
+
+
+<footer>
+    © 2026 Red Siren Studios · RS Tune Pro
+</footer>
+
+</body>
+</html>
