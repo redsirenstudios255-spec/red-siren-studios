@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="RS Tune Pro — powerful audio recording and sound management by Red Siren Studios.">
+
+<title>RS Tune Pro v1.0 — Red Siren Studios</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #08090c;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ================= NAV ================= */
+
+.nav {
+  width: 100%;
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #22252b;
+  background: rgba(8,9,12,0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.brand b {
+  display: block;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.brand small {
+  color: #999;
+  letter-spacing: 3px;
+}
+
+.nav-link {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.nav-link:hover {
+  color: #ff3030;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 85vh;
+  padding: 90px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background:
+    radial-gradient(circle at 80% 30%, #351010 0%, transparent 35%),
+    #08090c;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.badge {
+  display: inline-block;
+  border: 1px solid #3b2020;
+  padding: 8px 14px;
+  border-radius: 30px;
+  color: #ff4545;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 8vw, 92px);
+  line-height: 0.95;
+  margin-bottom: 30px;
+}
+
+.hero h1 span {
+  color: #ff3030;
+}
+
+.hero p {
+  color: #a9abb0;
+  max-width: 600px;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 23px;
+  border-radius: 7px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn-red {
+  background: #e92727;
+  color: white;
+}
+
+.btn-red:hover {
+  background: #ff4040;
+  transform: translateY(-2px);
+}
+
+.btn-dark {
+  border: 1px solid #34363d;
+  color: #ddd;
+}
+
+.btn-dark:hover {
+  border-color: #ff3030;
+}
+
+
+/* ================= APP ICON ================= */
+
+.app-visual {
+  width: 280px;
+  height: 280px;
+  border-radius: 55px;
+  background: linear-gradient(145deg, #241010, #0d0e12);
+  border: 1px solid #4b2020;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 80px rgba(255,30,30,0.12);
+}
+
+.app-visual-inner {
+  width: 170px;
+  height: 170px;
+  border-radius: 38px;
+  background: #e92727;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+  font-weight: bold;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+
+/* ================= FEATURES ================= */
+
+.section {
+  padding: 100px 7%;
+}
+
+.section-dark {
+  background: #0d0f13;
+}
+
+.kicker {
+  color: #ff3b3b;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.section h2 {
+  font-size: clamp(35px, 5vw, 60px);
+  margin: 15px 0 20px;
+}
+
+.section-intro {
+  color: #999da5;
+  max-width: 650px;
+  margin-bottom: 50px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.feature {
+  padding: 30px;
+  background: #13151a;
+  border: 1px solid #24272e;
+  border-radius: 14px;
+  min-height: 180px;
+}
+
+.feature-number {
+  color: #ff3030;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: #92959d;
+  font-size: 14px;
+}
+
+
+/* ================= SCREENSHOTS ================= */
+
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.screenshot {
+  background: #111318;
+  border: 1px solid #292c33;
+  border-radius: 12px;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.screenshot img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.screenshot span {
+  display: block;
+  padding: 12px 7px 8px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+
+/* ================= DOWNLOAD ================= */
+
+.download {
+  padding: 100px 7%;
+  text-align: center;
+  background:
+    radial-gradient(circle at center, #351010 0%, transparent 50%),
+    #08090c;
+}
+
+.download h2 {
+  font-size: clamp(38px, 6vw, 65px);
+  margin: 15px 0;
+}
+
+.download p {
+  color: #999;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.download-button {
+  display: inline-block;
+  background: #e92727;
+  padding: 17px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.download-button:hover {
+  background: #ff3d3d;
+  transform: translateY(-2px);
+}
+
+.version {
+  display: block;
+  margin-top: 15px;
+  color: #777;
+  font-size: 13px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+  border-top: 1px solid #24262c;
+  padding: 30px 7%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  color: #777;
+  font-size: 13px;
+}
+
+.footer-brand {
+  color: #ddd;
+  font-weight: bold;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 70px;
+  }
+
+  .app-visual {
+    width: 220px;
+    height: 220px;
+    align-self: center;
+  }
+
+  .app-visual-inner {
+    width: 135px;
+    height: 135px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshots {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="nav">
+
+  <a href="index.html" class="brand">
+
+    <img src="logo.png"
+         alt="Red Siren Studios">
+
+    <span>
+      <b>RED SIREN</b>
+      <small>STUDIOS</small>
+    </span>
+
+  </a>
+
+  <a href="index.html" class="nav-link">
+    ← Back to Studio
+  </a>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <span class="badge">
+      RED SIREN STUDIOS · OFFICIAL APP
+    </span>
+
+    <h1>
+      RS <span>Tune</span> Pro
+    </h1>
+
+    <p>
+      A powerful audio recording and sound management
+      application built for creators, musicians and everyday
+      audio recording.
+    </p>
+
+    <div class="buttons">
+
+      <a
+        class="btn btn-red"
+        href="https://github.com/redsirenstudios255-spec/red-siren-studios/releases/latest"
+        target="_blank"
+        rel="noopener">
+        Download APK ↓
+      </a>
+
+      <a
+        class="btn btn-dark"
+        href="#features">
+        Explore Features →
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="app-visual">
+
+    <div class="app-visual-inner">
+      RS
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= FEATURES ================= -->
+
+<section id="features" class="section section-dark">
+
+  <span class="kicker">
+    01 / FEATURES
+  </span>
+
+  <h2>
+    Everything you need<br>
+    to work with audio.
+  </h2>
+
+  <p class="section-intro">
+    RS Tune Pro is designed to make recording,
+    playback and managing your recordings simple
+    and accessible.
+  </p>
+
+
+  <div class="features">
+
+
+    <article class="feature">
+
+      <div class="feature-number">
+        01
+      </div>
+
+      <h3>
+        Record
+      </h3>
+
+      <p>
+        Capture audio quickly with a clean
+        and simple recording experience.
+      </p>
+
+    </article>
+
+
+    <article class="feature">
+
+      <div class="feature-number">
+        02
+      </div>
+
+      <h3>
+        Live Waveform
+      </h3>
+
+      <p>
+        See your audio activity through
+        a live waveform while recording.
+      </p>
+
+    </article>
+
+
+    <article class="feature">
+
+      <div class="feature-number">
+        03
+      </div>
+
+      <h3>
+        Recordings
+      </h3>
+
+      <p>
+        Keep your recordings organized
+        and easy to access.
+      </p>
+
+    </article>
+
+
+    <article class="feature">
+
+      <div class="feature-number">
+        04
+      </div>
+
+      <h3>
+        Playback
+      </h3>
+
+      <p>
+        Listen to recorded audio directly
+        inside the application.
+      </p>
+
+    </article>
+
+
+    <article class="feature">
+
+      <div class="feature-number">
+        05
+      </div>
+
+      <h3>
+        Auto Save
+      </h3>
+
+      <p>
+        Your recordings can be saved
+        automatically for easier management.
+      </p>
+
+    </article>
+
+
+    <article class="feature">
+
+      <div class="feature-number">
+        06
+      </div>
+
+      <h3>
+        Manage Recordings
+      </h3>
+
+      <p>
+        Manage and organize your recorded
+        audio from one place.
+      </p>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= SCREENSHOTS ================= -->
+
+<section class="section">
+
+  <span class="kicker">
+    02 / APP PREVIEW
+  </span>
+
+  <h2>
+    Inside RS Tune Pro.
+  </h2>
+
+  <p class="section-intro">
+    Explore the RS Tune Pro interface and
+    experience the application before installing it.
+  </p>
+
+
+  <div class="screenshots">
+
+
+    <div class="screenshot">
+
+      <img
+        src="assets/screenshots/splash.png"
+        alt="RS Tune Pro Splash Screen">
+
+      <span>
+        Splash
+      </span>
+
+    </div>
+
+
+    <div class="screenshot">
+
+      <img
+        src="assets/screenshots/home.png"
+        alt="RS Tune Pro Home">
+
+      <span>
+        Home
+      </span>
+
+    </div>
+
+
+    <div class="screenshot">
+
+      <img
+        src="assets/screenshots/recording.png"
+        alt="RS Tune Pro Recording">
+
+      <span>
+        Recording
+      </span>
+
+    </div>
+
+
+    <div class="screenshot">
+
+      <img
+        src="assets/screenshots/recordings.png"
+        alt="RS Tune Pro Recordings">
+
+      <span>
+        Recordings
+      </span>
+
+    </div>
+
+
+    <div class="screenshot">
+
+      <img
+        src="assets/screenshots/playback.png"
+        alt="RS Tune Pro Playback">
+
+      <span>
+        Playback
+      </span>
+
+    </div>
+
+
+    <div class="screenshot">
+
+      <img
+        src="assets/screenshots/settings.png"
+        alt="RS Tune Pro Settings">
+
+      <span>
+        Settings
+      </span>
+
+    </div>
+
+
+    <div class="screenshot">
+
+      <img
+        src="assets/screenshots/about.png"
+        alt="RS Tune Pro About">
+
+      <span>
+        About
+      </span>
+
+    </div>
+
+
+    <div class="screenshot">
+
+      <img
+        src="assets/screenshots/help.png"
+        alt="RS Tune Pro Help">
+
+      <span>
+        Help
+      </span>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= DOWNLOAD ================= -->
+
+<section class="download">
+
+  <span class="kicker">
+    03 / GET THE APP
+  </span>
+
+  <h2>
+    Ready to tune?
+  </h2>
+
+  <p>
+    Download the latest official version of
+    RS Tune Pro from Red Siren Studios.
+  </p>
+
+  <a
+    class="download-button"
+    href="https://github.com/redsirenstudios255-spec/red-siren-studios/releases/latest"
+    target="_blank"
+    rel="noopener">
+    Download RS Tune Pro APK ↓
+  </a>
+
+  <span class="version">
+    Version 1.0 · Android · Red Siren Studios
+  </span>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="footer-brand">
+    RED SIREN STUDIOS · RS TUNE PRO
+  </div>
+
+  <span>
+    © 2026 Red Siren Studios
+  </span>
+
+  <span>
+    Built for creators.
+  </span>
+
+</footer>
+
+
+</body>
+</html>
